@@ -113,7 +113,7 @@
 	.row.uniform > * {
 		padding: 2em 0 0 2em;
 	}
-
+	
 	.row.uniform {
 		margin: -2em 0 -1px -2em;
 	}
@@ -1512,7 +1512,7 @@
 		}
 
 	h2 {
-		font-size: 1.75em;
+		font-size: 2.75em;
 	}
 
 	h3 {
@@ -1678,6 +1678,8 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		border: solid 2px rgb(165, 105, 192);
+		box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
 	}
 
 		input[type="submit"].icon,
@@ -1764,7 +1766,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: white;
+			background-color: rgb(172, 165, 165);
 		}
 
 		input[type="submit"]:active,
@@ -1783,6 +1785,9 @@
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
 			color: #666 !important;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 			input[type="submit"].alt:hover,
@@ -1790,7 +1795,7 @@
 			input[type="button"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background-color: rgba(144, 144, 144, 0.075);
+				background-color: rgba(125, 114, 129, 0.411);
 			}
 
 			input[type="submit"].alt:active,
@@ -1798,7 +1803,7 @@
 			input[type="button"].alt:active,
 			button.alt:active,
 			.button.alt:active {
-				background-color: rgba(144, 144, 144, 0.2);
+				background-color: rgba(113, 66, 128, 0.466);
 			}
 
 			input[type="submit"].alt.icon:before,
@@ -1815,7 +1820,7 @@
 		button.special,
 		.button.special {
 			background-color: #00BC8A;
-			color: #ffffff !important;
+			color: #ffffff !important
 		}
 
 			input[type="submit"].special:hover,
@@ -2171,6 +2176,9 @@
 		list-style: disc;
 		margin: 0 0 2em 0;
 		padding-left: 1em;
+		display: flex;
+		align-content: inline;
+		
 	}
 
 		ul li {
@@ -2199,6 +2207,8 @@
 		ul.checklist {
 			list-style: none;
 			padding-left: 0;
+			display: flex;
+			flex-direction: column;
 		}
 
 			ul.checklist li {
@@ -2277,6 +2287,8 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			padding-bottom: 14px;
+
 		}
 
 			form ul.actions {
@@ -2284,9 +2296,13 @@
 			}
 
 			ul.actions li {
-				display: inline-block;
-				padding: 0 1em 0 0;
+				
+
 				vertical-align: middle;
+				padding-bottom: 5px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 
 				ul.actions li:last-child {
@@ -2398,6 +2414,7 @@
 		border-top-color: rgba(144, 144, 144, 0.25);
 	}
 
+	
 	ul.checklist li:before {
 		color: #00BC8A;
 	}
@@ -2556,6 +2573,7 @@
 			.split > * > :last-child > :last-child,
 			.split > * > :last-child > :last-child > :last-child {
 				margin-bottom: 0;
+				flex-direction: column;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -2566,6 +2584,8 @@
 
 			.split > :nth-child(even) {
 				padding-left: 2em;
+				display: flex;
+				flex-direction: column;
 			}
 
 		}
@@ -2607,21 +2627,55 @@
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
+		justify-content: center;
 		border-bottom: solid 2px;
 		margin-bottom: 3em;
+		box-shadow: 0 4px 4px 2px #784a97b0;
+		border-top: solid 2px rgb(183, 146, 200);
+		border-radius: 20px;
 	}
 
 		.spotlight .image {
-			width: 40%;
+			width: fit-content;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 			.spotlight .image img {
-				width: 100%;
+				width: 10px;
+				border-radius: 20px;
+
+				border: purple;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
 			}
 
 		.spotlight .content {
-			padding: 2em 3em 0.1em 3em;
-			width: 60%;
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 150px;
+		}
+
+		.spotlight .contentP2 {
+			padding-top: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+
+		}
+
+		.spotlight .content h2 {
+			padding-top: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -2666,12 +2720,143 @@
 	.spotlight {
 		background-color: white;
 		border-bottom-color: rgba(144, 144, 144, 0.25);
+		display: flex;
+		justify-content: center	;
+	}
+
+/* SpotlightP2 */
+
+	.spotlight {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;
+		border-bottom: solid 2px;
+		margin-bottom: 3em;
+		box-shadow: 0 4px 4px 2px #784a97b0;
+		border-top: solid 2px rgb(183, 146, 200);
+		border-radius: 20px;
+	}
+
+		.spotlight .image {
+			width: fit-content;
+			display: flex;
+			justify-content: center;
+		}
+
+			.spotlight .image img {
+				width: 70%;
+				border-radius: 20px;
+				height: 30%;
+				border: purple;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+			}
+
+			.spotlight .image2 img {
+				width: 54%;
+				border-radius: 20px;
+				height: 25%;
+				border: purple;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+			}
+
+			.spotlight .image3 img {
+				width: 50%;
+				border-radius: 20px;
+				height: 30%;
+				border: purple;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-left: 50px;	
+			}
+
+		.spotlight .content {
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 150px;
+		}
+
+		.spotlight .contentP2 {
+			padding-top: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+
+		}
+
+		.spotlight .content h2 {
+			padding-top: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.spotlight .image {
+				width: 55%;
+			}
+
+			.spotlight .content {
+				padding: 1.5em 2em 0.1em 2em;
+				width: 45%;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.spotlight {
+				display: block;
+				margin-bottom: 2em;
+			}
+
+				.spotlight .image {
+					width: 100%;
+				}
+
+				.spotlight .content {
+					padding: 1em 2em 0.1em 2em;
+					width: 100%;
+				}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.spotlight .content {
+				padding: 1em 1.5em 0.1em 0.5em;
+			}
+
+		}
+
+	.spotlight {
+		background-color: white;
+		border-bottom-color: rgba(144, 144, 144, 0.25);
+		display: flex;
+		justify-content: center	;
 	}
 
 /* Wrapper */
 
 	.wrapper {
-		padding: 5em 0 3em 0;
+		padding: 2em 0 3em 0;
 		position: relative;
 	}
 
@@ -2680,6 +2865,19 @@
 			margin-right: auto;
 			width: 70em;
 			max-width: 100%;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			flex-direction: column;
+		}
+
+		.wrapper > .inner .abovebanner {
+
+			width: 200em;
+			max-width: 100%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column
 		}
 
 		.wrapper.alt {
@@ -2943,6 +3141,13 @@
 
 			.wrapper.style2 h1, .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6 {
 				color: #666;
+				display: flex;
+				justify-content: center;
+			}
+
+			.wrapper p {
+				font-weight: 1000
+				
 			}
 
 			.wrapper.style2 blockquote {
@@ -3160,7 +3365,7 @@
 			.wrapper.style2.alt {
 				border-top-color: rgba(144, 144, 144, 0.25);
 			}
-
+			
 		@media screen and (max-width: 1366px) {
 
 			.wrapper {
@@ -3202,7 +3407,10 @@
 		background-image: url("images/overlay.png"), linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
 		background-size: 100px 100px, cover;
 		color: rgba(255, 255, 255, 0.5);
-		padding: 10em 0 4em;
+		padding: 5em 0 4em;
+		box-shadow: 0 4px 4px -2px #92689b;
+		border-top: solid 2px rgb(183, 146, 200);
+		
 	}
 
 		#banner h2 {
@@ -3210,13 +3418,16 @@
 			line-height: 1.4;
 			margin-bottom: 0;
 			color: #fff;
+			display: flex;
+			justify-content: center;
 		}
 
 		#banner p {
-			font-size: 1.15em;
+			font-size: 1.8em;
 			font-weight: bold;
 			line-height: 1.5em;
 			margin-bottom: 1.5em;
+			color: white;
 		}
 
 		#banner > .inner {
@@ -3229,7 +3440,7 @@
 		@media screen and (max-width: 1366px) {
 
 			#banner {
-				padding: 10em 2.5em 3em;
+				padding: 2.9em 2.5em 0.5em;
 			}
 
 				#banner h2 {
