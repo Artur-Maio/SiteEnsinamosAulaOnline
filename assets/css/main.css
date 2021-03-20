@@ -2293,15 +2293,8 @@
 
 		}
 
-			form ul.actions {
-				margin-top: 2em;
-			}
-
 			ul.actions li {
-				
-
 				vertical-align: middle;
-				padding-bottom: 5px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -2563,7 +2556,7 @@
 		}
 
 			.split > *:nth-child(odd) {
-				padding-right: 3em;
+				padding-right: 0em
 			}
 
 			.split > *:nth-child(even) {
@@ -2574,8 +2567,8 @@
 			.split > * > :last-child,
 			.split > * > :last-child > :last-child,
 			.split > * > :last-child > :last-child > :last-child {
-				margin-bottom: 0;
 				flex-direction: column;
+				border-radius: 40px;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -2672,6 +2665,7 @@
 			flex-direction: column;
 
 		}
+		
 
 		.spotlight .content h2 {
 			padding-top: 20px;
@@ -2789,6 +2783,7 @@
 
 		}
 		
+
 		.turno1 h2{
 			padding-top: 60px;
 			display: flex;
@@ -2817,6 +2812,8 @@
 		}
 		.turno2 ul {
 			padding-bottom: 85px;
+			display: flex;
+			justify-content: center;
 		}
 
 
@@ -2872,13 +2869,13 @@
 		display: flex;
 		justify-content: center	;
 		align-items: center;
-		width: 55em;
-		height: 160px;
+		width: 47em;
+		height: 150px;
 	}
 
 /* Wrapper */
 .wrapper {
-	padding: 2em 0 3em 0;
+	
 	position: relative;
 	display: flex;
 	justify-content: center;	
@@ -2911,34 +2908,42 @@
 			flex-direction: column;
 		}
 
-		.wrapper > .inner .abovebanner {
-			width: 25em;
-			max-width: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: flex-start;
-			flex-direction: row;
-		}
-
-		.wrapper > .inner .abovebanner section{
+		.wrapper .abovebanner {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			padding-right: 30px;
+			flex-direction: column;
 		}
-
-		.wrapper > .inner .abovebanner h2 {
-			margin: 0;
+		.wrapper .abovebanner img {
+			height: 70%;
+			width: 70%;
+			padding-right: 80px;
 		}
-
-		.wrapper > .inner .abovebanner img {
-			height: 400px;
+		.wrapper .abovebanner .texto {
 			display: flex;
 			justify-content: center;
-			align-items: center;
-			margin-right: 200px;
-			padding-right: 130px;
+			align-content: center;
+			padding-left: 15px;
+			flex-direction: column;
 		}
+			
+		.wrapper .abovebanner .text1 {
+			display: flex;
+			text-align: justify;
+			justify-content: center;
+			height: 79px;
+			width: 700px;
+		
+		}
+
+		.wrapper .abovebanner h2 {
+			line-height: normal;
+			font-weight: 550;
+			font-size: 47px;
+			padding-top: 32px;
+			color: rebeccapurple;
+		}
+
 		.wrapper.alt {
 			border-top: solid 2px;
 			border-top-color: rgba(144, 144, 144, 0.25);
@@ -3207,10 +3212,16 @@
 			}
 
 			.wrapper p {
-				font-weight: 1000
-				
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 1.2;
+
+
 			}
 
+				.inner11 {
+					padding-top: 40px;
+				}
 			.wrapper.style2 blockquote {
 				border-left-color: rgba(144, 144, 144, 0.25);
 			}
@@ -3472,35 +3483,77 @@
 		padding: 5em 0 4em;
 		box-shadow: 0 4px 4px -2px #92689b;
 		border-top: solid 2px rgb(183, 146, 200);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		
 	}
 
 		#banner h2 {
-			font-size: 3.5em;
-			line-height: 1.4;
+			font-size: 3.3em;
+			line-height: 1.1;
 			margin-bottom: 0;
 			color: #fff;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			padding-top: 10px;
+			padding-left: 15px;
 		}
 
 		#banner p {
 			font-size: 1.5em;
 			font-weight: bold;
 			line-height: 1.5em;
-			margin-bottom: 0.1em;
 			color: white;
+			margin: 0;
 		}
 
 		#banner > .inner {
 			margin-left: auto;
 			margin-right: auto;
-			max-width: 70em;
+			max-width:
 			width: 100%;
 			padding-bottom: 0;
 		}
 
+		#banner .inner .b1 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding-right: 20px;
+		}
+
+
+		#banner .inner .b2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-left: 37.7952px;
+			padding-bottom: 20px;
+			padding-right: 0;
+		}
+
+		#banner .inner .b2 img {
+			width: 50%;
+		}
+
+		#banner .inner .logo {
+			display: flex;
+			justify-content: center;
+			border-radius: 20px;
+		}
+
+		#banner .inner p {
+			display: flex;
+			justify-content: center;
+		}
+
+		#banner .inner .ulbanner{
+			display: flex;
+			justify-content: center;
+		}
 		@media screen and (max-width: 1366px) {
 
 			#banner {
@@ -3508,7 +3561,7 @@
 			}
 
 				#banner h2 {
-					font-size: 2em;
+					font-size: 35px;
 				}
 
 		}
@@ -3532,7 +3585,7 @@
 				}
 
 				#banner p {
-					font-size: 1.1em;
+					font-size: 0.3em;
 				}
 
 		}
